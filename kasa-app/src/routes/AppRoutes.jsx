@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import LogementPage from '../pages/LogementPage'; 
 import NotFound from '../pages/404'; 
+import { Routes, Route } from 'react-router-dom'; // import Routes
 
 const AppRoutes = () => {
     return(

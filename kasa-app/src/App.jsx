@@ -17,6 +17,7 @@ function App() {
       <nav> 
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>
+        <Link to="/404">404</Link>
       </nav>
     </header>
     < AppRoutes/>
