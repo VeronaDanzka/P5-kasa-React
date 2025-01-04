@@ -1,14 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import logoHeader from './assets/images/logoHeader.png'
+import logoFooter from './assets/images/logoFooter.png'
 import viteLogo from '/vite.svg'
 import './App.css'
-import NotFound from './pages/404.jsx'
+import AppRoutes from './routes/AppRoutes.jsx'
+import { Link } from 'react-router-dom';
+
 
 function App() {
   // const [count, setCount] = useState(0)
-
+  const currentYear = new Date().getFullYear();
   return (
-     < NotFound/>
+    <>
+    <header>
+      <img src={logoHeader} className="logo" alt="Kasa logo" />
+      <nav> 
+        <Link to="/">Accueil</Link>
+        <Link to="/about">A propos</Link>
+      </nav>
+    </header>
+    < AppRoutes/>
+    <footer> 
+      <img src={logoFooter} className="logo" alt="Kasa logo" />
+      <p>© {currentYear} Kasa. All right reserved</p>
+    </footer>
+    </>
   //     <div>
   //       <a href="https://vite.dev" target="_blank">
   //         <img src={viteLogo} className="logo" alt="Vite logo" />
