@@ -1,8 +1,11 @@
+import Banner from '../components/Banner'
+import bannerAbout from '../assets/images/banner/banner-about.png';
+
 const AboutPage = () => {
     return(
-        <div> 
-            <h1>Ma page about</h1>
-        </div>
+        <main> 
+            <Banner img={bannerAbout}/>
+        </main>
     )
 }
 

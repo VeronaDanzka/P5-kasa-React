@@ -2,9 +2,8 @@ import { useState } from 'react'
 import logoHeader from './assets/images/logoHeader.png'
 import logoFooter from './assets/images/logoFooter.png'
 import viteLogo from '/vite.svg'
-import './App.css'
 import AppRoutes from './routes/AppRoutes.jsx'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function App() {
@@ -12,15 +11,17 @@ function App() {
   const currentYear = new Date().getFullYear();
   return (
     <>
+    <div className="main-container">
     <header>
       <img src={logoHeader} className="logo" alt="Kasa logo" />
       <nav> 
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A propos</Link>
-        <Link to="/404">404</Link>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/about">A propos</NavLink>
+        <NavLink to="/404">404</NavLink>
       </nav>
     </header>
     < AppRoutes/>
+    </div>
     <footer> 
       <img src={logoFooter} className="logo" alt="Kasa logo" />
       <p>© {currentYear} Kasa. All right reserved</p>

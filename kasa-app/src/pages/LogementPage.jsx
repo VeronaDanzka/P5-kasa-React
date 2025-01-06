@@ -1,8 +1,8 @@
 const LogementPage = () => {
     return(
-        <div> 
+        <main> 
             <h1>Ma page Logement</h1>
-        </div>
+        </main>
     )
 }
 

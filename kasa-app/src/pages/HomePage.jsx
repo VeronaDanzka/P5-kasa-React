@@ -1,8 +1,11 @@
+import Banner from '../components/Banner'
+import bannerHome from '../assets/images/banner/banner-home.png';
+
 const HomePage = () => {
     return(
-        <div> 
-            <h1>Ma Home page</h1>
-        </div>
+        <main className="home-container">
+            <Banner title="Chez vous, partout et ailleurs" img={bannerHome}/> 
+        </main>
     )
 }
 
