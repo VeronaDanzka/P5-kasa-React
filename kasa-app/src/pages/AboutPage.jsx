@@ -1,4 +1,4 @@
-import Banner from '../components/Banner'
+import Banner from '../components/banner/Banner'
 import bannerAbout from '../assets/images/banner/banner-about.png';
 
 const AboutPage = () => {

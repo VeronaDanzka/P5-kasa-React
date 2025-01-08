@@ -1,0 +1,13 @@
+// mobile
+@mixin banner-size-border-m {
+    height: 111px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+// desktop
+
+@mixin banner-size-border-d {
+    height: 223px;
+    border-radius: 25px;
+}

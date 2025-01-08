@@ -17,14 +17,13 @@ function App() {
       <nav> 
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/about">A propos</NavLink>
-        <NavLink to="/404">404</NavLink>
       </nav>
     </header>
     < AppRoutes/>
     </div>
     <footer> 
       <img src={logoFooter} className="logo" alt="Kasa logo" />
-      <p>© {currentYear} Kasa. All right reserved</p>
+      <p>© {currentYear} Kasa. All <span>right reserved</span></p>
     </footer>
     </>
   //     <div>
