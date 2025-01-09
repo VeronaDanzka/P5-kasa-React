@@ -1,3 +1,6 @@
+import { useParams, Navigate } from "react-router-dom";
+import logements from "../data/logements.json";
+
 const LogementPage = () => {
     return(
         <main> 

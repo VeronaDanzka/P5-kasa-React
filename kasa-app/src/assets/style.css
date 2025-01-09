@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  height: 100vh;
 }
 
 #root {
@@ -18,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 
 .main-container {
@@ -83,11 +81,17 @@ main a {
   font-weight: 500;
   margin-bottom: 50px;
 }
+main .cards-container {
+  display: grid;
+  grid-template-columns: 335px;
+  grid-auto-rows: 255px;
+  gap: 22px;
+}
 
 footer {
   background-color: black;
   width: 100%;
-  height: 275px;
+  height: 209px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,6 +141,15 @@ footer p span {
   }
   main a {
     size: 18px;
+  }
+  main .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    grid-auto-rows: 340px;
+    gap: 40px;
+    background-color: #F6F6F6;
+    padding: 40px;
+    border-radius: 25px;
   }
   footer {
     justify-content: end;
