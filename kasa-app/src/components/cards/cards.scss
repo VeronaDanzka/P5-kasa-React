@@ -3,29 +3,36 @@
 .card{
     position: relative;
     height: 255px;
-    img{
-        width: 100%;
-        height: 255px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    h2{
-        position: absolute;
-        top: 0;
-        font-size: 18px;
-        color: var.$primary-color;
-        padding: 10px;
-        padding: 0;
-        margin:0;
-        background: var.$linear-gradient;
-        display: flex;
-        align-items: flex-start;
-        padding-left: 15px;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        border-radius: 10px;
-        padding-top: 55%;
+    figure{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        img{
+            width: 100%;
+            height: 255px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        figcaption{
+            position: absolute;
+            top: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: var.$primary-color;
+            padding: 10px;
+            padding: 0;
+            margin:0;
+            background: var.$linear-gradient;
+            display: flex;
+            align-items: flex-start;
+            padding-left: 15px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding-top: 55%;
+        }
     }
 }
 
@@ -33,13 +40,16 @@
 @media (min-width: 990px){
     .card{
         height: 340px;
-        img{
-            height: 340px;
-            border-radius: 25px;
-        }
-        h2{
-            border-radius: 25px;
-            padding-top: 260px;
+        max-width: 340px;
+        figure{
+            img{
+                height: 340px;
+                border-radius: 25px;
+            }
+            figcaption{
+                border-radius: 25px;
+                padding-top: 260px;
+            }
         }
     }
 }

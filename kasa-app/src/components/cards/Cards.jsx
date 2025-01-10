@@ -4,10 +4,12 @@ import './cards.css'
 const Cards = ({id, cover, title}) =>  {
     return(
         <Link to={`/logement/${id}`}>
-            <div className="card">
-                <img src={cover} loading="lazy" alt="logement image couverture"/>
-                <h2>{title}</h2>
-            </div>
+            <article className="card">
+                <figure>
+                    <img src={cover} loading="lazy" alt="logement image couverture"/>
+                    <figcaption>{title}</figcaption>
+                </figure>
+            </article>
         </Link>
     )
 }

@@ -2,17 +2,24 @@
   position: relative;
   height: 255px;
 }
-.card img {
+.card figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.card figure img {
   width: 100%;
   height: 255px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-.card h2 {
+.card figure figcaption {
   position: absolute;
   top: 0;
   font-size: 18px;
+  font-weight: 700;
   color: #FFFFFF;
   padding: 10px;
   padding: 0;
@@ -31,12 +38,13 @@
 @media (min-width: 990px) {
   .card {
     height: 340px;
+    max-width: 340px;
   }
-  .card img {
+  .card figure img {
     height: 340px;
     border-radius: 25px;
   }
-  .card h2 {
+  .card figure figcaption {
     border-radius: 25px;
     padding-top: 260px;
   }
