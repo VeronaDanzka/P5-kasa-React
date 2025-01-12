@@ -31,9 +31,11 @@ const Gallery = ({pictures}) => {
         {orderedPictures.map((picture, index) => (
             <img key={index} src={picture} className={`${direction}`} alt="image galerie" loading="lazy"/>
         ))}
-        <span>{`${count}/${pictures.length}`}</span>
-        <button onClick={nextClick} className="btn-next">{">"}</button>
-        <button onClick={prevClick} className="btn-prev">{"<"}</button>
+        {pictures.length > 1 && (<>
+                                    <span>{`${count}/${pictures.length}`}</span>
+                                    <button onClick={nextClick} className="btn-next">{">"}</button>
+                                    <button onClick={prevClick} className="btn-prev">{"<"}</button>
+                                  </>)}
         </>
     )
 }
