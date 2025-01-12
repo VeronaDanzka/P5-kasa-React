@@ -1,0 +1,67 @@
+@use '../../assets/variables' as var;
+
+//mobile
+.profile-container{
+    display: flex;
+    width: 135px;
+    align-items: center;
+    justify-content: flex-end;
+    height: 33px;
+    gap: 10px;
+    img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .default-profile{
+        width: 32px;
+        height: 32px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+    }
+    p{
+        text-align: end;
+        color:var.$secondary-color;
+        font-size: 12px;
+        margin:0;
+        span{
+            display: block;
+        }
+    }
+    
+}
+
+//desktop
+@media (min-width: 990px){
+    .profile-container{
+        display: flex;
+        width: 135px;
+        align-items: center;
+        justify-content: flex-end;
+        height: 64px;
+        gap: 10px;
+        img{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .default-profile{
+            width: 32px;
+            height: 32px;
+            background-color: #C4C4C4;
+            border-radius: 50%;
+        }
+        p{
+            text-align: end;
+            color:var.$secondary-color;
+            font-size: 18px;
+            margin: 10px 0 0 0;
+            span{
+                display: block;
+            }
+        }
+        
+    }
+}

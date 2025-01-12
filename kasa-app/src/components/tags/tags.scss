@@ -1,0 +1,35 @@
+@use '../../assets/variables' as var;
+
+//mobile
+.logement-container{
+    .btn-tag{
+        background-color: var.$secondary-color;
+        border: none;
+        height: 18px;
+        font-size: 10px;
+        font-weight: 700;
+        color: var.$primary-color;
+        font-family: 'Montserrat';
+        margin-right: 10px;
+        border-radius: 5px;
+        box-sizing: content-box;
+        min-width: 84px;
+    }
+}
+
+//desktop
+
+@media (min-width: 990px){
+    .logement-container{
+        .btn-tag{
+            height: 25px;
+            font-size: 14px;
+            margin-right: 10px;
+            border-radius: 10px;
+            box-sizing: content-box;
+            min-width: 115px;
+            margin-top: 15px;
+        }
+    }
+}
+

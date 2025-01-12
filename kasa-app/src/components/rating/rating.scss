@@ -1,0 +1,31 @@
+@use '../../assets/variables' as var;
+
+//mobile
+.rating-stars-container{
+    line-height: 2;
+    .fa-solid{
+        color:var.$secondary-color;
+        margin-right: 5px;
+    }
+    .neutral-star{
+        color:#E3E3E3;
+        margin-right: 5px;
+    }
+}
+
+//desktop
+
+@media (min-width: 990px){
+    .rating-stars-container{
+        text-align: end;
+        line-height: 1;
+        font-size: 25px;
+        .fa-solid{
+            margin-right: 10px;
+        }
+        .neutral-star{
+            margin-right: 10px;
+        }
+    }
+    
+}
