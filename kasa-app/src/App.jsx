@@ -3,12 +3,12 @@ import logoHeader from './assets/images/logoHeader.png'
 import logoFooter from './assets/images/logoFooter.png'
 import viteLogo from '/vite.svg'
 import AppRoutes from './routes/AppRoutes.jsx'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 
 function App() {
   // const [count, setCount] = useState(0)
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   return (
     <>
     <div className="main-container">

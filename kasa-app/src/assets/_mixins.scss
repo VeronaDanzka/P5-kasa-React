@@ -5,6 +5,18 @@
     width: 100%;
 }
 
+@mixin opacity-animation {
+    @keyframes opacity-animation {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1; 
+        }
+    }
+    animation: opacity-animation 1.2s ease-in-out; 
+}
+
 // desktop
 @mixin banner-size-border-d {
     height: 223px;

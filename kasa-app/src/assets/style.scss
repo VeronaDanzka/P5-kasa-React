@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'mixins' as mix;
 
 
 // mobile first
@@ -48,7 +49,7 @@ header{
             color:black;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 500;
         &.active{
                 text-decoration: underline;
@@ -86,6 +87,7 @@ main{
         grid-template-columns: 335px;
         grid-auto-rows: 255px;
         gap: 22px;
+        @include mix.opacity-animation;
     }
 }
 footer{

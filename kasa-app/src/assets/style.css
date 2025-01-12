@@ -48,7 +48,7 @@ header nav a {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 header nav a.active {
@@ -86,6 +86,15 @@ main .cards-container {
   grid-template-columns: 335px;
   grid-auto-rows: 255px;
   gap: 22px;
+  animation: opacity-animation 1.2s ease-in-out;
+}
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 footer {
