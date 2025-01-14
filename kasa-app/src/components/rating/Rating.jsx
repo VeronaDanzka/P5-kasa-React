@@ -20,7 +20,6 @@ const Rating = ({rating}) =>{
             stars.push(<i key={`neutral-${i}`} className="fa-sm fa-solid fa-star neutral-star" aria-hidden="true"></i>);
         }
     }
-    console.log(stars)
     return(
         <> 
         {stars.length > 0 && (stars.map(star => star ))}

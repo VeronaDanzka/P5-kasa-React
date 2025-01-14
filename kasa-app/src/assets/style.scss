@@ -18,9 +18,11 @@ body{
 }
 #root {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto;
     align-items: center;
+    height: 100vh;
+    justify-items: center;
 }   
 
 .main-container{
@@ -121,9 +123,24 @@ main{
             gap: 10px;
         }
     }
-    
-
+    .logement-collapses{
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        margin-top: 15px;
+        flex-direction: column;
+    }
 }
+.about-container{
+    .about-collapse{
+        width: 100%;
+        max-width: 1023px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}    
+
 footer{
     background-color:black;
     width: 100%;
@@ -209,6 +226,16 @@ footer{
                 justify-content: space-around;
                 margin-top: 0;
             }
+        }
+        .logement-collapses{
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
+    
+    .about-container{
+        .about-collapse{
+            gap: 30px;
         }
     }
     footer{

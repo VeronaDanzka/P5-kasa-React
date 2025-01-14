@@ -1,0 +1,156 @@
+@use '../../assets/mixins' as mix;
+@use '../../assets/variables' as var;
+
+
+.collapse-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .collapse-title{
+        background-color: var.$secondary-color;
+        display:flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1000;
+        height: 30px;
+        border-radius: 5px;
+        h2{
+            color: var.$primary-color;
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0;
+            line-height:2.2;
+            padding-left: 10px;
+        }
+        button{
+            background: none;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+            i{
+                color:var.$primary-color;
+                font-size: 20px;
+                line-height: 1.5;
+                
+            }
+        }
+    }
+    .under-collapse{
+        display: none;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color:#F6F6F673;
+        padding: 15px 15px;
+        position:relative;
+        z-index: 1;
+        margin-top: -3px;
+        p{
+            font-size: 12px;
+            font-weight: 400;
+            margin:0;
+        }
+    }
+    &.open{
+        .collapse-title{
+            button{
+                i{
+                    @include mix.collapse-animation-rotate-open;
+                }
+                    
+            }
+        }
+        .under-collapse{
+            display: block;
+            @include mix.collapse-animation-open;
+        }
+    }
+    //collapse click close
+    &.close{
+        .collapse-title{
+            button{
+                i{
+                    @include mix.collapse-animation-rotate-close;
+                }
+            }
+        }
+        .under-collapse{
+            display: block;
+            @include mix.collapse-animation-close;
+            &.padding{
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+//desktop
+@media (min-width: 990px){
+    .collapse-container{
+        .collapse-title{
+            height: 52px;
+            border-radius: 10px;
+            h2{
+                color: var.$primary-color;
+                font-size: 18px;
+                margin: 0;
+                line-height:3;
+                padding-left: 10px;
+            }
+            button{
+                background: none;
+                border: none;
+                margin-right: 10px;
+                cursor: pointer;
+                i{
+                    font-size: 25px;
+                    
+                }
+            }
+        }
+        .under-collapse{
+            padding: 25px 20px;
+            p{
+                font-size: 18px;
+            }
+        }
+        // collapse click open
+        &.open{
+            .collapse-title{
+                @include mix.collapse-animation-border-open;
+            }
+        }
+        //collapse click close
+        &.close{
+            .collapse-title{
+                @include mix.collapse-animation-border-close;
+            }
+            .under-collapse{
+                &.padding{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+    .about-collapse{
+        .collapse-container{
+            .collapse-title{
+                border-radius: 5px;   
+            }
+        &.open{
+            .collapse-title{
+                animation: none;
+            }
+        }
+        &.close{
+            .collapse-title{
+                animation: none;
+            }
+        }
+        }
+    }
+}

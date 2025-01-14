@@ -1,0 +1,212 @@
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.collapse-container .collapse-title {
+  background-color: #FF6060;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+  height: 30px;
+  border-radius: 5px;
+}
+.collapse-container .collapse-title h2 {
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 2.2;
+  padding-left: 10px;
+}
+.collapse-container .collapse-title button {
+  background: none;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.collapse-container .collapse-title button i {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.collapse-container .under-collapse {
+  display: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+  padding: 15px 15px;
+  position: relative;
+  z-index: 1;
+  margin-top: -3px;
+}
+.collapse-container .under-collapse p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+.collapse-container.open .collapse-title button i {
+  animation: collapse-animation-rotate-open 0.3s forwards;
+}
+@keyframes collapse-animation-rotate-open {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+.collapse-container.open .under-collapse {
+  display: block;
+  animation: collapse-top-to-bottom 0.3s ease-in-out forwards;
+}
+@keyframes collapse-top-to-bottom {
+  from {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+  to {
+    height: auto;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 990px) {
+  .collapse-container.open .under-collapse {
+    animation: collapse-top-to-bottom-d 0.3s ease-in-out forwards;
+  }
+  @keyframes collapse-top-to-bottom-d {
+    from {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-100%);
+    }
+    to {
+      height: auto;
+      opacity: 1;
+      overflow: hidden;
+      transform: translateY(0);
+    }
+  }
+}
+.collapse-container.close .collapse-title button i {
+  animation: collapse-animation-rotate-close 0.3s forwards;
+}
+@keyframes collapse-animation-rotate-close {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.collapse-container.close .under-collapse {
+  display: block;
+  animation: collapse-bottom-to-top 0.3s ease-in-out forwards;
+}
+@keyframes collapse-bottom-to-top {
+  from {
+    height: auto;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
+  }
+  to {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+}
+@media (min-width: 990px) {
+  .collapse-container.close .under-collapse {
+    animation: collapse-bottom-to-top-d 0.3s ease-in-out forwards;
+  }
+  @keyframes collapse-bottom-to-top-d {
+    from {
+      height: auto;
+      opacity: 1;
+      overflow: hidden;
+      transform: translateY(0);
+    }
+    to {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-100%);
+    }
+  }
+}
+.collapse-container.close .under-collapse.padding {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 990px) {
+  .collapse-container .collapse-title {
+    height: 52px;
+    border-radius: 10px;
+  }
+  .collapse-container .collapse-title h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0;
+    line-height: 3;
+    padding-left: 10px;
+  }
+  .collapse-container .collapse-title button {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .collapse-container .collapse-title button i {
+    font-size: 25px;
+  }
+  .collapse-container .under-collapse {
+    padding: 25px 20px;
+  }
+  .collapse-container .under-collapse p {
+    font-size: 18px;
+  }
+  .collapse-container.open .collapse-title {
+    animation: collapse-border-open 0.3s forwards;
+  }
+  @keyframes collapse-border-open {
+    from {
+      border-radius: 10px;
+    }
+    to {
+      border-radius: 5px;
+    }
+  }
+  .collapse-container.close .collapse-title {
+    animation: collapse-border-close 0.3s forwards;
+  }
+  @keyframes collapse-border-close {
+    from {
+      border-radius: 5px;
+    }
+    to {
+      border-radius: 10px;
+    }
+  }
+  .collapse-container.close .under-collapse.padding {
+    padding: 0;
+    margin: 0;
+  }
+  .about-collapse .collapse-container .collapse-title {
+    border-radius: 5px;
+  }
+  .about-collapse .collapse-container.open .collapse-title {
+    animation: none;
+  }
+  .about-collapse .collapse-container.close .collapse-title {
+    animation: none;
+  }
+}/*# sourceMappingURL=collapse.css.map */
