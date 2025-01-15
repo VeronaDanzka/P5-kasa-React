@@ -15,24 +15,20 @@
     opacity: 1;
   }
 }
-.slide-container button {
-  z-index: 1000;
-  background: none;
-  border: none;
-  font-size: 40px;
-  font-family: "Manrope";
-  color: #FFFFFF;
-  top: 100px;
-  padding: 0;
+.slide-container .chevron {
+  position: absolute;
+  width: 11px;
+  height: 19px;
   cursor: pointer;
 }
-.slide-container .btn-next {
-  right: 0;
-  position: absolute;
+.slide-container .chevron.next {
+  right: 5px;
+  top: 120px;
 }
-.slide-container .btn-prev {
-  left: 0;
-  position: absolute;
+.slide-container .chevron.prev {
+  left: 5px;
+  top: 120px;
+  transform: rotate(180deg);
 }
 .slide-container img {
   width: 100%;
@@ -79,10 +75,18 @@
     max-width: 1240px;
     position: relative;
   }
-  .slide-container button {
-    font-size: 160px;
-    font-family: "Manrope";
-    top: 90px;
+  .slide-container .chevron {
+    width: 46px;
+    height: 80px;
+  }
+  .slide-container .chevron.next {
+    right: 25px;
+    top: 165px;
+  }
+  .slide-container .chevron.prev {
+    left: 25px;
+    top: 165px;
+    transform: rotate(180deg);
   }
   .slide-container img {
     height: 415px;

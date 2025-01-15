@@ -1,4 +1,6 @@
 import "./rating.css"
+import starSolid from '../../assets/images/icons/star-active.svg'
+import starNeutral from '../../assets/images/icons/star-inactive.svg'
 
 const Rating = ({rating}) =>{
     const starNumber = 5
@@ -7,17 +9,17 @@ const Rating = ({rating}) =>{
     const stars = [];
     if (solidStarNumber >= 1) {
         for (let i = 0; i < solidStarNumber; i++) {
-            stars.push(<i key={i} className="fa-sm fa-solid fa-star" aria-hidden="true"></i>);
+            stars.push(<img src={starSolid} key={i}/>);
         }
         if(neutralStarNumber !== 0){
             for (let i = 0; i < neutralStarNumber; i++) {
-                stars.push(<i key={`neutral-${i}`} className="fa-sm fa-solid fa-star neutral-star" aria-hidden="true"></i>);
+                stars.push(<img src={starNeutral} key={`neutral-${i}`}/>);
             }
         }
     }
     else{
         for (let i = 0; i < starNumber; i++) {
-            stars.push(<i key={`neutral-${i}`} className="fa-sm fa-solid fa-star neutral-star" aria-hidden="true"></i>);
+            stars.push(<img src={starNeutral} key={`neutral-${i}`}/>);
         }
     }
     return(

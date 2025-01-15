@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./gallery.css" 
+import chevron from '../../assets/images/icons/chevron.svg'
 
 const Gallery = ({pictures}) => {
     const [count, setCount] = useState(1)
@@ -34,8 +35,8 @@ const Gallery = ({pictures}) => {
         ))}
         {pictures.length > 1 && (<>
                                     <span>{`${count}/${pictures.length}`}</span>
-                                    <button onClick={nextClick} className="btn-next">{">"}</button>
-                                    <button onClick={prevClick} className="btn-prev">{"<"}</button>
+                                    <img src={chevron} onClick={nextClick} className="chevron next"/>
+                                    <img src={chevron} onClick={prevClick} className="chevron prev"/>  
                                   </>)}
         </>
     )

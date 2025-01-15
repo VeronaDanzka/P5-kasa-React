@@ -1,13 +1,8 @@
-.rating-stars-container {
-  line-height: 2;
-}
-.rating-stars-container .fa-solid {
-  color: #FF6060;
+.rating-stars-container img {
+  margin-left: 0;
   margin-right: 5px;
-}
-.rating-stars-container .neutral-star {
-  color: #E3E3E3;
-  margin-right: 5px;
+  width: 13px;
+  height: 100%;
 }
 
 @media (min-width: 990px) {
@@ -16,10 +11,9 @@
     line-height: 1;
     font-size: 25px;
   }
-  .rating-stars-container .fa-solid {
-    margin-right: 10px;
-  }
-  .rating-stars-container .neutral-star {
-    margin-right: 10px;
+  .rating-stars-container img {
+    margin-left: 13px;
+    width: 24px;
+    height: 24px;
   }
 }/*# sourceMappingURL=rating.css.map */

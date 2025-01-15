@@ -2,14 +2,11 @@
 
 //mobile
 .rating-stars-container{
-    line-height: 2;
-    .fa-solid{
-        color:var.$secondary-color;
+    img{
+        margin-left: 0;
         margin-right: 5px;
-    }
-    .neutral-star{
-        color:#E3E3E3;
-        margin-right: 5px;
+        width: 13px;
+        height: 100%;
     }
 }
 
@@ -20,12 +17,10 @@
         text-align: end;
         line-height: 1;
         font-size: 25px;
-        .fa-solid{
-            margin-right: 10px;
-        }
-        .neutral-star{
-            margin-right: 10px;
+        img{
+            margin-left: 13px;
+            width: 24px;
+            height: 24px;
         }
     }
-    
 }

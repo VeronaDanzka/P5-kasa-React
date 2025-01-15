@@ -12,15 +12,13 @@ const LogementPage = () => {
     const navigate = useNavigate()
     const logement = logements.find((logement) => logement.id === id)
     useEffect(() => {
-            !logement && (
+            if(!logement){
                 navigate("/404")
-            )
-        }
-    )
+            }},[id, logement])
     return(
         <main className="logement-container">
             <div className="slide-container">
-             <Gallery pictures={logement.pictures}/>
+            {logement && (<Gallery pictures={logement.pictures}/>)}
             </div> 
             {logement && (<>
                             <div className="title-and-infos-container"> 

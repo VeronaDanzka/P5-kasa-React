@@ -20,16 +20,11 @@
   line-height: 2.2;
   padding-left: 10px;
 }
-.collapse-container .collapse-title button {
-  background: none;
-  border: none;
+.collapse-container .collapse-title .chevron-collapse {
   margin-right: 10px;
+  height: 100%;
+  width: 16px;
   cursor: pointer;
-}
-.collapse-container .collapse-title button i {
-  color: #FFFFFF;
-  font-size: 20px;
-  line-height: 1.5;
 }
 .collapse-container .under-collapse {
   display: none;
@@ -46,7 +41,7 @@
   font-weight: 400;
   margin: 0;
 }
-.collapse-container.open .collapse-title button i {
+.collapse-container.open .collapse-title .chevron-collapse {
   animation: collapse-animation-rotate-open 0.3s forwards;
 }
 @keyframes collapse-animation-rotate-open {
@@ -92,7 +87,7 @@
     }
   }
 }
-.collapse-container.close .collapse-title button i {
+.collapse-container.close .collapse-title .chevron-collapse {
   animation: collapse-animation-rotate-close 0.3s forwards;
 }
 @keyframes collapse-animation-rotate-close {
@@ -152,8 +147,9 @@
     font-size: 18px;
     line-height: 3;
   }
-  .collapse-container .collapse-title button i {
-    font-size: 25px;
+  .collapse-container .collapse-title .chevron-collapse {
+    margin-right: 15px;
+    width: 24px;
   }
   .collapse-container .under-collapse {
     padding: 25px 20px;

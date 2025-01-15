@@ -11,24 +11,20 @@
     border-radius: 10px;
     overflow: hidden;
     @include mix.opacity-animation;
-    button{
-        z-index: 1000;
-        background:none;
-        border:none;
-        font-size: 40px;
-        font-family: 'Manrope';
-        color: var.$primary-color;
-        top: 100px;
-        padding: 0;
+    .chevron{
+        position: absolute;
+        width: 11px;
+        height: 19px;
         cursor: pointer;
-    }
-    .btn-next{
-        right:0;
-        position: absolute;
-    }
-    .btn-prev{
-        left:0;
-        position: absolute;
+        &.next{
+            right:5px;
+            top: 120px;            
+        }
+        &.prev{
+            left:5px;
+            top: 120px;
+            transform: rotate(180deg);
+        }
     }
     img{
         width: 100%;
@@ -78,10 +74,18 @@
         height: 415px;
         max-width: 1240px;
         position: relative;
-        button{
-            font-size: 160px;
-            font-family: 'Manrope';
-            top: 90px;
+        .chevron{
+            width: 46px;
+            height: 80px;
+            &.next{
+                right:25px;
+                top: 165px;            
+            }
+            &.prev{
+                left:25px;
+                top: 165px;
+                transform: rotate(180deg);
+            }
         }
         img{
             height: 415px;

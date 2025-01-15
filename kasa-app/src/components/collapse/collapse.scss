@@ -22,17 +22,11 @@
             line-height:2.2;
             padding-left: 10px;
         }
-        button{
-            background: none;
-            border: none;
+        .chevron-collapse{
             margin-right: 10px;
-            cursor: pointer;
-            i{
-                color:var.$primary-color;
-                font-size: 20px;
-                line-height: 1.5;
-                
-            }
+            height: 100%;
+            width: 16px;
+            cursor:pointer;
         }
     }
     .under-collapse{
@@ -53,13 +47,11 @@
     // collapse click open
     &.open{
         .collapse-title{
-            button{
-                i{
+            .chevron-collapse{
                     @include mix.collapse-animation-rotate-open;
                 }
                     
             }
-        }
         .under-collapse{
             display: block;
             @include mix.collapse-animation-open;
@@ -68,11 +60,9 @@
     //collapse click close
     &.close{
         .collapse-title{
-            button{
-                i{
-                    @include mix.collapse-animation-rotate-close;
-                }
-            }
+            .chevron-collapse{
+                @include mix.collapse-animation-rotate-close;
+            }                
         }
         .under-collapse{
             display: block;
@@ -97,11 +87,9 @@
                 font-size: 18px;
                 line-height:3;
             }
-            button{
-                i{
-                    font-size: 25px;
-                    
-                }
+            .chevron-collapse{
+                margin-right: 15px;
+                width: 24px;
             }
         }
         .under-collapse{
@@ -139,6 +127,6 @@
                 animation: none;
             }
         }
-        }
     }
+}
 }

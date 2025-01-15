@@ -135,7 +135,7 @@ main .cards-container {
   display: flex;
   gap: 20px;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 5px;
   flex-direction: column;
 }
 
@@ -211,7 +211,7 @@ footer p span {
     border-radius: 25px;
   }
   .logement-container {
-    gap: 10px;
+    gap: 15px;
   }
   .logement-container h1 {
     font-size: 36px;
@@ -232,6 +232,7 @@ footer p span {
   .logement-container .logement-collapses {
     flex-direction: row;
     gap: 50px;
+    margin-top: 15px;
   }
   .about-container .about-collapse {
     gap: 30px;
