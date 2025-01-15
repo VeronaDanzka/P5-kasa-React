@@ -20,7 +20,7 @@
   position: absolute;
   top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
@@ -51,6 +51,7 @@
   .banner div {
     height: 223px;
     border-radius: 25px;
+    justify-content: center;
   }
   .banner div h1 {
     text-align: center;

@@ -6,11 +6,11 @@ import './banner.css'
 const Banner = ({ title, span, img }) => {
         return(
             <div className="banner">
-                <img src={img} alt="banner"></img>
+                <img src={img} alt="banner"/>
                 <div>
                     {title && (<h1>
                                 {title}
-                                {span ? <span>&nbsp;{span}</span> : null}
+                                {span && (<span>&nbsp;{span}</span>)}
                                 </h1>)}
                 </div>
             </div>
