@@ -16,9 +16,7 @@
   .logement-container .btn-tag {
     height: 25px;
     font-size: 14px;
-    margin-right: 10px;
     border-radius: 10px;
-    box-sizing: content-box;
     min-width: 115px;
     margin-top: 15px;
   }

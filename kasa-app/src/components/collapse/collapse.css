@@ -63,15 +63,14 @@
 }
 @keyframes collapse-top-to-bottom {
   from {
-    height: 0;
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
     transform: translateY(-100%);
   }
   to {
-    height: auto;
+    max-height: 400px;
     opacity: 1;
-    overflow: hidden;
     transform: translateY(0);
   }
 }
@@ -81,15 +80,14 @@
   }
   @keyframes collapse-top-to-bottom-d {
     from {
-      height: 0;
+      max-height: 0;
       opacity: 0;
       overflow: hidden;
       transform: translateY(-100%);
     }
     to {
-      height: auto;
+      max-height: 400px;
       opacity: 1;
-      overflow: hidden;
       transform: translateY(0);
     }
   }
@@ -111,15 +109,14 @@
 }
 @keyframes collapse-bottom-to-top {
   from {
-    height: auto;
+    max-height: 400px;
     opacity: 1;
     overflow: hidden;
     transform: translateY(0);
   }
   to {
-    height: 0;
+    max-height: 0;
     opacity: 0;
-    overflow: hidden;
     transform: translateY(-100%);
   }
 }
@@ -129,15 +126,14 @@
   }
   @keyframes collapse-bottom-to-top-d {
     from {
-      height: auto;
+      max-height: 400px;
       opacity: 1;
       overflow: hidden;
       transform: translateY(0);
     }
     to {
-      height: 0;
+      max-height: 0;
       opacity: 0;
-      overflow: hidden;
       transform: translateY(-100%);
     }
   }
@@ -153,17 +149,8 @@
     border-radius: 10px;
   }
   .collapse-container .collapse-title h2 {
-    color: #FFFFFF;
     font-size: 18px;
-    margin: 0;
     line-height: 3;
-    padding-left: 10px;
-  }
-  .collapse-container .collapse-title button {
-    background: none;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
   }
   .collapse-container .collapse-title button i {
     font-size: 25px;
@@ -195,10 +182,6 @@
     to {
       border-radius: 10px;
     }
-  }
-  .collapse-container.close .under-collapse.padding {
-    padding: 0;
-    margin: 0;
   }
   .about-collapse .collapse-container .collapse-title {
     border-radius: 5px;

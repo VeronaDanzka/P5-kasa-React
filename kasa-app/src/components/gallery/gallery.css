@@ -48,7 +48,7 @@
 }
 
 .right-to-left {
-  animation: slide-right-to-left 0.6s forwards;
+  animation: slide-right-to-left 0.6s ease-in-out forwards;
 }
 
 @keyframes slide-right-to-left {
@@ -62,7 +62,7 @@
   }
 }
 .left-to-right {
-  animation: slide-left-to-right 0.6s forwards;
+  animation: slide-left-to-right 0.6s ease-in-out forwards;
 }
 
 @keyframes slide-left-to-right {
@@ -75,35 +75,17 @@
 }
 @media (min-width: 990px) {
   .slide-container {
-    width: 100%;
     height: 415px;
     max-width: 1240px;
     position: relative;
   }
   .slide-container button {
-    z-index: 1000;
-    background: none;
-    border: none;
     font-size: 160px;
     font-family: "Manrope";
-    color: #FFFFFF;
     top: 90px;
   }
-  .slide-container .btn-next {
-    right: 0;
-    position: absolute;
-  }
-  .slide-container .btn-prev {
-    left: 0;
-    position: absolute;
-  }
   .slide-container img {
-    width: 100%;
     height: 415px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    position: absolute;
-    top: 0;
   }
   .slide-container span {
     display: block;
