@@ -67,10 +67,6 @@
         .under-collapse{
             display: block;
             @include mix.collapse-animation-close;
-            &.padding{
-                padding: 0;
-                margin: 0;
-            }
         }
     }
 }

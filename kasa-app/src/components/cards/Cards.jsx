@@ -6,7 +6,7 @@ const Cards = ({id, cover, title}) =>  {
         <Link to={`/logement/${id}`}>
             <article className="card">
                 <figure>
-                    <img src={cover} loading="lazy" alt="logement image couverture"/>
+                    <img src={cover} loading="lazy" alt={`${title} image couverture`}/>
                     <figcaption>{title}</figcaption>
                 </figure>
             </article>
