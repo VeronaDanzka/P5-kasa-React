@@ -4,7 +4,6 @@ import chevron from '../../assets/images/icons/chevron-collapse.svg'
 
 const Collapse = ({title, elements}) => { 
         const [collapseState, setCollapseState] = useState("")
-        const [paddingState, setPaddingState] = useState(null)
         const collapseClick = () => {
             collapseState === "open" ? setCollapseState("close") : setCollapseState("open")
         }
@@ -14,8 +13,8 @@ const Collapse = ({title, elements}) => {
                         <h2>{title}</h2>
                         <img src={chevron} onClick={collapseClick} className="chevron-collapse"/>
                     </div>
-                    <div className={`under-collapse ${paddingState}`}>
-                        {Array.isArray(elements) ? elements.map((element, index) => (<p key={`tag-${index}`}>{element}</p>)) : <p>{elements}</p>}
+                    <div className="under-collapse">
+                        {Array.isArray(elements) ? <ul>{elements.map((element, index) => (<li key={`tag-${index}`}>{element}</li>))}</ul> : <p>{elements}</p>}
                     </div>
                 </div>                        
         )

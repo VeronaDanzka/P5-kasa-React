@@ -25,128 +25,68 @@
   height: 100%;
   width: 16px;
   cursor: pointer;
+  transition: transform 400ms ease-in-out;
 }
 .collapse-container .under-collapse {
-  display: none;
+  max-height: 0;
+  transform: translateY(-100%);
   box-sizing: border-box;
   overflow: hidden;
   background-color: rgba(246, 246, 246, 0.4509803922);
-  padding: 15px 15px;
+  padding: 0px 15px;
   position: relative;
   z-index: 1;
   margin-top: -3px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  transition: 400ms ease-in-out;
 }
-.collapse-container .under-collapse p {
+.collapse-container .under-collapse p, .collapse-container .under-collapse ul {
   font-size: 12px;
   font-weight: 400;
   margin: 0;
 }
-.collapse-container.open .collapse-title .chevron-collapse {
-  animation: collapse-animation-rotate-open 0.4s forwards;
+.collapse-container .under-collapse ul {
+  list-style-type: none;
+  padding: 0;
 }
-@keyframes collapse-animation-rotate-open {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-180deg);
-  }
+.collapse-container.open .collapse-title .chevron-collapse {
+  transform: rotate(-180deg);
 }
 .collapse-container.open .under-collapse {
-  display: block;
-  animation: collapse-top-to-bottom 0.4s ease-in-out forwards;
-}
-@keyframes collapse-top-to-bottom {
-  from {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transform: translateY(-100%);
-    padding: 0 15px;
-    margin-top: 0;
-  }
-  to {
-    max-height: 400px;
-    opacity: 1;
-    transform: translateY(0);
-    padding: 15px 15px;
-    margin-top: -3px;
-  }
+  max-height: 400px;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+  padding: 15px 15px;
+  margin-top: -3px;
 }
 @media (min-width: 990px) {
   .collapse-container.open .under-collapse {
-    animation: collapse-top-to-bottom-d 0.4s ease-in-out forwards;
-  }
-  @keyframes collapse-top-to-bottom-d {
-    from {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transform: translateY(-100%);
-      padding: 0 20px;
-      margin-top: 0;
-    }
-    to {
-      max-height: 400px;
-      opacity: 1;
-      transform: translateY(0);
-      padding: 25px 20px;
-      margin-top: -3px;
-    }
-  }
-}
-.collapse-container.close .collapse-title .chevron-collapse {
-  animation: collapse-animation-rotate-close 0.4s forwards;
-}
-@keyframes collapse-animation-rotate-close {
-  from {
-    transform: rotate(-180deg);
-  }
-  to {
-    transform: rotate(0);
-  }
-}
-.collapse-container.close .under-collapse {
-  display: block;
-  animation: collapse-bottom-to-top 0.4s ease-in-out forwards;
-}
-@keyframes collapse-bottom-to-top {
-  from {
     max-height: 400px;
     opacity: 1;
     overflow: hidden;
     transform: translateY(0);
-    padding: 15px 15px;
+    padding: 25px 20px;
     margin-top: -3px;
   }
-  to {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-100%);
-    padding: 0 15px;
-    margin-top: 0;
-  }
+}
+.collapse-container.close .collapse-title .chevron-collapse {
+  transform: rotate(0deg);
+}
+.collapse-container.close .under-collapse {
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  margin-top: 0;
 }
 @media (min-width: 990px) {
   .collapse-container.close .under-collapse {
-    animation: collapse-bottom-to-top-d 0.4s ease-in-out forwards;
-  }
-  @keyframes collapse-bottom-to-top-d {
-    from {
-      max-height: 400px;
-      opacity: 1;
-      overflow: hidden;
-      transform: translateY(0);
-      padding: 25px 20px;
-      margin-top: -3px;
-    }
-    to {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-100%);
-      padding: 0 20px;
-      margin-top: 0;
-    }
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    margin-top: 0;
   }
 }
 
@@ -154,6 +94,7 @@
   .collapse-container .collapse-title {
     height: 52px;
     border-radius: 10px;
+    transition: border-radius 400ms ease-in-out;
   }
   .collapse-container .collapse-title h2 {
     font-size: 18px;
@@ -164,32 +105,13 @@
     width: 24px;
   }
   .collapse-container .under-collapse {
-    padding: 25px 20px;
+    padding: 0 20px;
   }
-  .collapse-container .under-collapse p {
+  .collapse-container .under-collapse p, .collapse-container .under-collapse ul {
     font-size: 18px;
   }
   .collapse-container.open .collapse-title {
-    animation: collapse-border-open 0.4s forwards;
-  }
-  @keyframes collapse-border-open {
-    from {
-      border-radius: 10px;
-    }
-    to {
-      border-radius: 5px;
-    }
-  }
-  .collapse-container.close .collapse-title {
-    animation: collapse-border-close 0.4s forwards;
-  }
-  @keyframes collapse-border-close {
-    from {
-      border-radius: 5px;
-    }
-    to {
-      border-radius: 10px;
-    }
+    border-radius: 5px;
   }
   .about-collapse .collapse-container .collapse-title {
     border-radius: 5px;
