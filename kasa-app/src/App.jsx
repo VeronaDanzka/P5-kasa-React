@@ -16,7 +16,7 @@ function App() {
         <NavLink to="/about">A propos</NavLink>
       </nav>
     </header>
-    < AppRoutes/>
+    <AppRoutes />
     </div>
     <footer> 
       <img src={logoFooter} className="logo" alt="Kasa logo" />

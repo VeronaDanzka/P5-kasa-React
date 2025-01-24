@@ -6,10 +6,10 @@ import Collapse from '../components/collapse/Collapse'
 const AboutPage = () => {
     return(
         <main className="about-container"> 
-            <Banner img={bannerAbout}/>
+            <Banner img={bannerAbout} />
             <div className="about-collapse">
                 {about.map(aboutElement => (
-                    <Collapse key={aboutElement.id} title={aboutElement.title} elements={aboutElement.text}/>
+                    <Collapse key={aboutElement.id} title={aboutElement.title} elements={aboutElement.text} />
                 ))} 
             </div>
         </main>

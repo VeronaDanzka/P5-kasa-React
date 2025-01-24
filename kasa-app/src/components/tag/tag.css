@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 .logement-container .btn-tag {
   background-color: #FF6060;
   border: none;

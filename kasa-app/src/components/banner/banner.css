@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 .banner {
   height: 111px;
   border-radius: 10px;

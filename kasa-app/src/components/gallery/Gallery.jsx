@@ -31,7 +31,7 @@ const Gallery = ({pictures}) => {
     return(
         <>
         {orderedPictures.map((picture, index) => (
-            <img key={index} src={picture} className={`${direction}`} alt="image galerie" loading="lazy"/>
+            <img key={index} src={picture} className={direction} alt="image galerie" loading="lazy"/>
         ))}
         {pictures.length > 1 && (<>
                                     <span>{`${count}/${pictures.length}`}</span>

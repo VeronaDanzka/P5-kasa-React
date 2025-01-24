@@ -3,7 +3,7 @@ import "./collapse.css"
 import chevron from '../../assets/images/icons/chevron-collapse.svg'
 
 const Collapse = ({title, elements}) => { 
-        const [collapseState, setCollapseState] = useState("")
+        const [collapseState, setCollapseState] = useState("close")
         const collapseClick = () => {
             collapseState === "open" ? setCollapseState("close") : setCollapseState("open")
         }

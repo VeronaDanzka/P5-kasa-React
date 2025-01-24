@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
 $primary-color: #FFFFFF;
 $secondary-color: #FF6060;
 $overlay-color: rgba(0, 0, 0, 0.5);
 $text-outline: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 $linear-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgb(4 4 4 / 32%) 99.99%, rgb(0 0 0 / 74%) 100%);
+$primary-font: 'Montserrat';

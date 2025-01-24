@@ -17,28 +17,29 @@ const LogementPage = () => {
             }},[id, logement])
     return(
         <main className="logement-container">
-            <div className="slide-container">
-            {logement && (<Gallery pictures={logement.pictures}/>)}
-            </div> 
-            {logement && (<>
-                            <div className="title-and-infos-container"> 
-                                <div className="title-container">
-                                    <h1>{logement.title}</h1>
-                                    <p>{logement.location}</p>
-                                    {logement.tags.map((tag, index) => (
-                                        < Tag key={index} tag={tag}/>
-                                        ))}
-                                </div>
-                                <div className="profile-rating-container">
-                                    <div className="rating-stars-container">< Rating rating={logement.rating}/></div> 
-                                <Profile profile={logement.host}/> 
-                                </div>
-                            </div>
-                            <div className="logement-collapses">
-                                < Collapse title="Description" elements={logement.description}/>
-                                < Collapse title="Équipement" elements={logement.equipments}/>
-                            </div>
-                          </>)}
+            {logement && (
+                <>
+                    <div className="slide-container">
+                        <Gallery pictures={logement.pictures} />
+                    </div> 
+                    <div className="title-and-infos-container"> 
+                        <div className="title-container">
+                            <h1>{logement.title}</h1>
+                            <p>{logement.location}</p>
+                            {logement.tags.map((tag, index) => (
+                                <Tag key={index} tag={tag} />
+                                ))}
+                        </div>
+                        <div className="profile-rating-container">
+                            <div className="rating-stars-container">< Rating rating={logement.rating}/></div> 
+                        <Profile profile={logement.host} /> 
+                        </div>
+                    </div>
+                    <div className="logement-collapses">
+                        <Collapse title="Description" elements={logement.description} />
+                        <Collapse title="Équipement" elements={logement.equipments} />
+                    </div>
+                </>)}
         </main>
     )
 }
