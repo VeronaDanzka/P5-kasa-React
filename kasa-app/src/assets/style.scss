@@ -13,8 +13,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-body{
+html, body{
     margin:0;
+    padding: 0;
 }
 #root {
     width: 100%;
@@ -24,7 +25,17 @@ body{
     height: 100vh;
     justify-items: center;
 }   
-
+.figma-banner{
+        height: 130px;
+        background-color:beige;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        box-sizing: border-box;
+    }
 .main-container{
     min-width: 330px;
     width:100%;
