@@ -24,6 +24,16 @@
     }
 
 }
+@mixin arrow-animation-portfolio{
+    @keyframes toAndFro {
+        from { transform: translateX(calc(-1 * 5px)); }
+        to   { transform: translateX(5px); }
+    }
+    margin-right: 5px;
+    display: inline-block; 
+    animation: toAndFro 1s ease-in-out infinite alternate;
+    will-change: transform;
+}
 
 @mixin collapse-animation-open {
     max-height: 400px;

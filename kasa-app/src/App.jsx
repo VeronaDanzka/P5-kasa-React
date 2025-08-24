@@ -12,6 +12,9 @@ function App() {
         <p>Cette application web est une démo réalisée avec React en suivant un design Figma pixel perfect et responsive:  
           <br/><a href="https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/Kasa_FR?type=design&node-id=0-1&mode=design&t=1KgUwWWFtuAVbsJ5-0" target="_blank" rel="noopener noreferrer">voir le design Figma ↗</a>
         </p>
+        <div>
+          <a href="https://davidedenotarpietro.dev" target="_blank" rel="noopener noreferrer"><span className="animation-arrow">⬅</span> Portfolio</a>
+        </div>
     </div>
     <div className="main-container">
       <header>

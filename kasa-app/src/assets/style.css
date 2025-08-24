@@ -27,7 +27,7 @@ html, body {
 }
 
 .figma-banner {
-  height: 130px;
+  height: 180px;
   background-color: beige;
   width: 100%;
   display: flex;
@@ -36,6 +36,28 @@ html, body {
   align-items: center;
   padding: 25px;
   box-sizing: border-box;
+  flex-direction: column;
+}
+.figma-banner div {
+  width: 100%;
+  text-align: start;
+}
+.figma-banner div a {
+  color: black;
+}
+.figma-banner div a span {
+  margin-right: 5px;
+  display: inline-block;
+  animation: toAndFro 1s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes toAndFro {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
 }
 
 .main-container {

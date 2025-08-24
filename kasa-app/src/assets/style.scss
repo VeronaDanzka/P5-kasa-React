@@ -26,7 +26,7 @@ html, body{
     justify-items: center;
 }   
 .figma-banner{
-        height: 130px;
+        height: 180px;
         background-color:beige;
         width: 100%;
         display: flex;
@@ -35,6 +35,19 @@ html, body{
         align-items: center;
         padding: 25px;
         box-sizing: border-box;
+        flex-direction: column;
+        div {
+            width: 100%;
+            text-align: start;
+            a {
+                color: black;
+                span{
+                    @include mix.arrow-animation-portfolio;
+                }
+            
+            }
+
+        }
     }
 .main-container{
     min-width: 330px;
